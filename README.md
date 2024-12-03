@@ -139,69 +139,29 @@
 
 src
  ┣ assets
- ┃ ┣ Banner.png
- ┃ ┣ icon.png
- ┃ ┣ landing.png
- ┃ ┣ logo.png
- ┃ ┣ logo_b.png
- ┃ ┣ logo_bg_gray.png
- ┃ ┣ logo_bg_skyblue.png
- ┃ ┗ logo_w.png
  ┣ components
  ┃ ┣ Alert
- ┃ ┃ ┣ Alert.styled.ts
- ┃ ┃ ┗ Alert.tsx
  ┃ ┣ AuthenticationInput
- ┃ ┃ ┣ AuthenticationInput.styled.ts
- ┃ ┃ ┗ AuthenticationInput.tsx
  ┃ ┣ Button
- ┃ ┃ ┣ Button.styled.ts
- ┃ ┃ ┗ Button.tsx
  ┃ ┣ Comment
- ┃ ┃ ┣ Comment.styled.ts
- ┃ ┃ ┗ Comment.tsx
  ┃ ┣ DropDown
- ┃ ┃ ┣ DropDown.styled.ts
- ┃ ┃ ┗ DropDown.tsx
  ┃ ┣ Form
- ┃ ┃ ┣ EditNickNameForm
- ┃ ┃ ┃ ┗ EditNickNameForm.tsx
- ┃ ┃ ┗ EditPasswordForm
- ┃ ┃ ┃ ┗ EditPasswordForm.tsx
  ┃ ┣ Input
- ┃ ┃ ┣ Input.styled.ts
- ┃ ┃ ┗ Input.tsx
  ┃ ┣ InputChecker
- ┃ ┃ ┗ InputChecker.tsx
  ┃ ┣ InputErrorMessage
- ┃ ┃ ┗ InputErrorMessage.tsx
  ┃ ┣ Modal
  ┃ ┃ ┣ ModalPortal
- ┃ ┃ ┃ ┗ ModalPortal.ts
  ┃ ┃ ┗ ModalView
- ┃ ┃ ┃ ┗ ModalView.tsx
  ┃ ┣ Navbar
- ┃ ┃ ┣ Navbar.styled.ts
- ┃ ┃ ┗ Navbar.tsx
  ┃ ┣ NavbarContainer
- ┃ ┃ ┣ NavbarContainer.styled.ts
- ┃ ┃ ┗ NavbarContainer.tsx
  ┃ ┣ Pagination
- ┃ ┃ ┣ Pagination.styled.ts
- ┃ ┃ ┗ Pagination.tsx
  ┃ ┣ PostList
- ┃ ┃ ┣ PostList.styled.ts
- ┃ ┃ ┗ PostList.tsx
  ┃ ┣ Toast
- ┃ ┃ ┣ Toast.styled.ts
- ┃ ┃ ┗ Toast.tsx
  ┃ ┗ index.ts
- ┣ hooks
- ┃ ┗ ex.txt
  ┣ pages
  ┃ ┣ admin
  ┃ ┃ ┣ AddCategory
- ┃ ┃ ┃ ┗ AddCategory.tsx
+ ┃ ┃ ┃ 
  ┃ ┃ ┣ Main
  ┃ ┃ ┃ ┣ Dnd
  ┃ ┃ ┃ ┃ ┣ DraggableUser.tsx
