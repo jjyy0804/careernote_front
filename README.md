@@ -138,94 +138,31 @@
 ```
 
 src
- ┣ assets
- ┣ components
- ┃ ┣ Alert
- ┃ ┣ AuthenticationInput
- ┃ ┣ Button
- ┃ ┣ Comment
- ┃ ┣ DropDown
- ┃ ┣ Form
- ┃ ┣ Input
- ┃ ┣ InputChecker
- ┃ ┣ InputErrorMessage
- ┃ ┣ Modal
- ┃ ┃ ┣ ModalPortal
- ┃ ┃ ┗ ModalView
- ┃ ┣ Navbar
- ┃ ┣ NavbarContainer
- ┃ ┣ Pagination
- ┃ ┣ PostList
- ┃ ┣ Toast
- ┃ ┗ index.ts
- ┣ pages
- ┃ ┣ admin
- ┃ ┃ ┣ AddCategory
- ┃ ┃ ┃ 
- ┃ ┃ ┣ Main
- ┃ ┃ ┃ ┣ Dnd
- ┃ ┃ ┃ ┃ ┣ DraggableUser.tsx
- ┃ ┃ ┃ ┃ ┗ UserSection.tsx
- ┃ ┃ ┃ ┣ AdminMain.styled.ts
- ┃ ┃ ┃ ┗ AdminMain.tsx
- ┃ ┃ ┣ NoAuthPage
- ┃ ┃ ┃ ┗ NoAuthPage.tsx
- ┃ ┃ ┣ PostView
- ┃ ┃ ┃ ┣ PostCard
- ┃ ┃ ┃ ┃ ┣ PostCard.styled.ts
- ┃ ┃ ┃ ┃ ┗ PostCard.tsx
- ┃ ┃ ┃ ┗ AdminPostView.tsx
- ┃ ┃ ┗ WritePost
- ┃ ┃ ┃ ┗ AdminWritePost.tsx
- ┃ ┗ user
- ┃ ┃ ┣ Error
- ┃ ┃ ┃ ┗ ErrorPage.tsx
- ┃ ┃ ┣ FindPassword
- ┃ ┃ ┃ ┗ FindPassword.tsx
- ┃ ┃ ┣ Login
- ┃ ┃ ┃ ┗ Login.tsx
- ┃ ┃ ┣ Main
- ┃ ┃ ┃ ┣ Main.styled.ts
- ┃ ┃ ┃ ┗ Main.tsx
- ┃ ┃ ┣ MyInfo
- ┃ ┃ ┃ ┗ MyInfo.tsx
- ┃ ┃ ┣ PostView
- ┃ ┃ ┃ ┗ PostView.tsx
- ┃ ┃ ┣ Register
- ┃ ┃ ┃ ┗ RegisterPage.tsx
- ┃ ┃ ┣ ResetPassword
- ┃ ┃ ┃ ┗ ResetPassword.tsx
- ┃ ┃ ┗ WritePost
- ┃ ┃ ┃ ┣ WritePost.styled.ts
- ┃ ┃ ┃ ┗ WritePost.tsx
- ┣ routes
- ┃ ┣ apiRoutes.ts
- ┃ ┣ privateRoutes.tsx
- ┃ ┗ routes.tsx
- ┣ stores
- ┃ ┣ store.ts
- ┃ ┣ useCategoryStore.ts
- ┃ ┣ useCheckDuplication.ts
- ┃ ┣ usePostStore.ts
- ┃ ┗ userStore.ts
- ┣ styles
- ┃ ┣ Authentication
- ┃ ┃ ┗ Authentication.styled.ts
- ┃ ┗ Globalstyles.ts
- ┣ types
- ┃ ┣ button.ts
- ┃ ┣ input.ts
- ┃ ┣ post.ts
- ┃ ┗ user.ts
- ┣ utils
- ┃ ┣ apiUtils.ts
- ┃ ┣ dndUtils.ts
- ┃ ┣ editDeleteUtils.ts
- ┃ ┣ RegEx.ts
- ┃ ┗ ToastUtils.ts
- ┣ App.tsx
- ┣ image.d.ts
- ┗ index.tsx
+ ┣ assets/                   # 이미지, 아이콘 등 정적 파일
+ ┣ components/              # 공통 UI 컴포넌트 모음 (버튼, 인풋, 모달 등)
+ ┃ ┣ Alert/                 # Alert 창 컴포넌트
+ ┃ ┣ Modal/                 # Modal 관련 구성 (포탈, 뷰 등)
+ ┃ ┣ Navbar/                # 상단 네비게이션 바 구성
+ ┃ ┣ Form/, Input/, Button/ 등 # 재사용 가능한 입력 UI 요소들
+ ┃ ┗ index.ts               # 컴포넌트 export 통합
+ ┣ pages/                   # 페이지 단위 컴포넌트
+ ┃ ┣ admin/                 # 관리자용 페이지 (카테고리 관리, 글 관리 등)
+ ┃ ┃ ┣ Main/                # 관리자 메인 페이지 + Drag & Drop 구성
+ ┃ ┃ ┣ PostView/, WritePost/ 등 # 관리자용 게시글 관리
+ ┃ ┣ user/                  # 사용자용 페이지 (로그인, 회원가입, 글쓰기 등)
+ ┃ ┃ ┣ Main/, Login/, Register/ 등 # 일반 유저의 화면 및 라우트 구성
+ ┣ routes/                  # 라우트 정의 (공통, 인증 라우트 등)
+ ┣ stores/                  # Zustand 기반 글로벌 상태 관리
+ ┃ ┣ store.ts               # Zustand 설정 파일
+ ┃ ┣ usePostStore.ts 등     # 포스트, 유저 등 도메인별 상태 관리
+ ┣ styles/                  # 전역 및 공통 스타일
+ ┃ ┣ Globalstyles.ts        # 전체 앱에 적용되는 전역 스타일
+ ┃ ┗ Authentication/        # 로그인, 회원가입 스타일
+ ┣ types/                   # 전역 타입 정의 (Post, User, Button 등)
+ ┣ utils/                   # 유틸 함수 모음 (API, 정규식, 드래그 등)
+ ┣ App.tsx                  # 앱의 루트 컴포넌트
+ ┗ index.tsx                # 애플리케이션 진입점
+
 
 ```
 
