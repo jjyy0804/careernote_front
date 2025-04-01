@@ -9,9 +9,6 @@
 </p>
 
 <br/>
-
-#####   배포 주소 : http://kdt-react-1-team01.elicecoding.com
-<br/>
 <br/>
 
 
